@@ -43,13 +43,13 @@
   .descripcion{
     font-size: 1.2em;
   }
-  @media (min-width: 200px) and (max-width:359px){
+  @media (min-width: 200px) and (max-width:380px){
     .btn-fa{
       margin-top: 15px ;
     }
     textarea{
       width: 75%;
-      
+
     }
   }
 
