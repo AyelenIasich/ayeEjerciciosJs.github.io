@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicios Javascript</title>
+    <link rel="stylesheet" href="juego.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,900;1,300;1,700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+</head>
+
+<body>
+
+    <!-- Ejercicio del 9  -->
+    <section class="container mt-5 text-center mb-5">
+        <div class="row ">
+            <div class="col-12 col-lg-6">
+                <form>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="text-center">Convertor de dólar a peso Argentino</h5>
+                        </div>
+                        <div class="card-body align-items-center">
+                            <label class="pt-3" for="montoIngresado">Ingresar monto en dólares:</label>
+                            <input type="number" name="montoIngresado" id="montoIngresado" min="1" max="10000000"
+                                required />
+                            <button class="btn btn-outline-success " type="button"
+                                onclick="convertirDolarAPeso()">Cotizar</button>
+                            <div class="col-6 offset-3 pt-4">
+                                <div class="alert alert-success " id="alert-peso" role="alert" style="display:none;">
+                                    <p id="resultado">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Ejercicio del 10  -->
+            <div class="col-12 col-lg-6 pt-4 pt-lg-0">
+                <form>
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="text-center">Convertor de Pesos Argentinos a Dólares</h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="pt-3" for="dolarIngresado">Ingresar monto en pesos:</label>
+                            <input type="number" name="dolarIngresado" id="dolarIngresado" min="1" max="10000000" />
+                            <button class="btn btn-outline-success" type="button"
+                                onclick="convertirPesoADolar()">Cotizar</button>
+                            <div class="col-6 offset-3 pt-3">
+                                <div class="alert alert-success " id="alert-dolar" role="alert" style="display:none;">
+                                    <p id="resultadoDolar">
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+        </div>
+        <!-- Ejercicio del 11  -->
+
+        </div>
+        <div class="row mt-4">
+            <div class="col-12 col-lg-8 offset-lg-2">
+                <form>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center">Convertidor de centrigrados a farenheit</h4>
+                        </div>
+                        <div class="card-body">
+                            <label class="pt-5" for="centigrados">Ingresar grados en centígrados:</label>
+                            <input type="number" name="centigrados" id="centigrados" />
+                            <button class="btn btn-outline-success" type="button"
+                                onclick="centrigradosAFahrenheit()">Calcular</button>
+                            <div class="col-6 offset-3 pt-4">
+                                <div class="alert alert-success " id="alert-fa" role="alert" style="display:none;">
+                                    <p id="resultadoFahrenheit">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Ejercicio 13 Juego de adivinanza -->
+
+        <div class="card mt-5">
+            <div class="card-header game pt-4 pb-lg-4 ">
+                <h1>¿Te animás a adivinar el número ?</h1>
+            </div>
+            <div class="card-body align-items-center">
+                <div class="row mt-5 mb-5">
+                    <div class="col-12 col-lg-5 offset-lg-1 pe-5 ps-5 mt-lg-5 ">
+                        <p class="descripcion"> He seleccionado un numero especifico para vos que se encuentra entre el
+                            0 y 5.</p>
+                        <p class="descripcion">¿te animás a adivinarlo?</p>
+                        <p class="descripcion">Piensa bien tus elecciones, solo tienes 3 oportunidades!</p>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-5 pt-4 pb-lg-4 ">
+                        <label for="adivinarCampo" class="descripcion">Adivina el número: </label>
+                        <input type="number" id="adivinarCampo" class="adivinarCampo col-3">
+                        <div class="row ps-lg-5 pt-4">
+                            <div class="col-6 col-lg-4 offset-lg-2 p-0 "><button type="submit" value="Enviar respuesta"
+                                    class="enviarRespuesta btn btn-outline-intento " onclick="adivinarNumero()">Probar
+                                    suerte</button></div>
+                            <div class="col-6 col-lg-3 p-0 m-0"><button type="submit"
+                                    class="resetButton btn btn-outline-reiniciar " disabled
+                                    onclick="resetGame()">Reiniciar</button> </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col m-auto">
+
+                        <div class="resultados descripcion pt-4">
+                            <p class="intentos descripcion"></p>
+                            <p class="resultado m-auto descripcion"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Formulario para enviar una caja de carton Ejercicio 12 -->
+    <section>
+
+        <div class="row pt-4 pb-5">
+            <div class="col-10 col-md-7 col-lg-5 mx-auto form p-4 mb-5">
+                <form id="formulario">
+                    <div class="row text-center">
+                        <div class="col">
+                            <h4>Formulario solicitud de envio de una caja de cartón</h4>
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="form-group mb-3">
+                            <label for="nombre" class="form-label mb-2 pt-2">Nombre del cliente:</label>
+                            <input placeholder="Pablo" type="text" value="" class="form-control" name="nombre"
+                                id="nombre">
+                        </div>
+                    </div>
+                    <div class="col mb-3">
+                        <div class="form-group mb-3">
+                            <label for="material" class="form-label mb-2 pt-2">Material de la caja:</label>
+                            <select name="material" id="material">
+                                <option value="madera">Madera</option>
+                                <option value="plastico">Plastico</option>
+                                <option value="papel">Papel</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="col mb-3">
+                        <p>Seleccione una de las dimensiones para la caja:</p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="dimensiones" id="diminuta"
+                                value="diminuta">
+                            <label class="form-check-label" for="diminuta">
+                                Diminuta
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" value="mediano" name="dimensiones" id="mediano"
+                                checked>
+                            <label class="form-check-label" for="mediano">
+                                Mediano
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="dimensiones" id="grande" value="grande">
+                            <label class="form-check-label" for="grande">
+                                Grande
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group mb-3">
+                            <label for="comentario" class="form-label mb-2 pt-2">Comentarios:</label> <br>
+                            <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-7">
+                                <p class="respuesta"></p>
+                            </div>
+                            <div class="col-5">
+                                <input type="button" id="btn" name="btn" value="Enviar" class="btn btn-outline-intento"
+                                    onclick="obtenerDatos()"></input>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================== Ejercicio 14 Lista de nombres ============================ -->
+    <section>
+        <div class="row pt-4 pb-5">
+            <div class="col-10 col-md-7 col-lg-5 mx-auto p-4 mb-5">
+                <div class="container listaNombres">
+                    <form>
+                        <div class="row mt-5">
+                            <div class="col text-center">
+                                <h2>Lista de nombres</h2>
+                            </div>
+                        </div>
+                        <div class="row mt-4">
+                            <div class="col-12 col-lg-7 m-auto">
+                                <div class="form-group mb-3">
+                                    <label class="form-check-label " for="listaNombres">Ingresar Nombre</label>
+                                    <input class="form-control" required type="text" name="listaNombres"
+                                        id="listaNombre" placeholder="Pablo">
+                                </div>
+                            </div>
+                            <div class="col-12 text-center col-lg-4 mt-lg-4"> <button
+                                    class="btn btn-nombre btn-outline-intento">Ingresar</button></div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div class="col">
+                            <div class="li container  pb-3">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="ejercicios9-14.js"></script>
+
+
+    <!-- Descomentar para probarlos ejercicios -->
+    <!-- <script src="ejercicios1-8"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
