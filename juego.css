@@ -43,7 +43,7 @@
   .descripcion{
     font-size: 1.2em;
   }
-  @media (min-width: 200px) and (max-width:380px){
+  @media (min-width: 180px) and (max-width:380px){
     .btn-fa{
       margin-top: 15px ;
     }
@@ -64,8 +64,6 @@
     padding:  0.8em  0.1em 0.8em 0.1em;
     color: white;
   }
-  .resultado{
-    width: 100%;
 
 
  }
