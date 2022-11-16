@@ -44,6 +44,13 @@
     font-size: 1.2em;
   }
 
+ @media (min-width: 300px) and (max-width:991px){
+  .descripcion{
+    font-size: 1em;
+  }
+
+
+ }
   .game{
     background: linear-gradient(
       53deg,
@@ -113,4 +120,5 @@ li p {
   padding-left: 20px;  
   padding-bottom: 15px;
   width:100%;
+    
 }

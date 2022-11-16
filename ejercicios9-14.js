@@ -53,6 +53,7 @@ let numeroAleatorioJuego = generarNumeroAleatorio(0, 5);
 
 const intentos = document.querySelector(".intentos");
 const resultado = document.querySelector(".resultado");
+const numeroRandom = document.querySelector(".numero-random");
 
 const enviarRespuesta = document.querySelector(".enviarRespuesta");
 const adivinarCampo = document.querySelector(".adivinarCampo");
@@ -73,7 +74,8 @@ function adivinarNumero() {
     resultado.style.backgroundColor = "#5dc460";
     setGameOver();
   } else if (contadorIntentos === 3) {
-    resultado.textContent = "Lo siento, perdiste";
+    resultado.textContent = "Lo siento, perdiste";    
+    numeroRandom.textContent = "El número correcto es: " + numeroAleatorioJuego;
     setGameOver();
   } else {
     resultado.textContent = "¡Incorrecto!, intentalo de nuevo";
